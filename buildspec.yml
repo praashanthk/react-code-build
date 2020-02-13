@@ -14,5 +14,7 @@ phases:
       - npm run build:$ENVIRONMENT
   post_build:
     commands:
+      - aws configure set aws_access_key_id AKIA2SJ3TGLXL2R75XMD
+      - aws configure set aws_secret_access_key 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
       - aws s3 sync build $S3_BUCKET 
 
